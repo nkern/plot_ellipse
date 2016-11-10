@@ -11,3 +11,5 @@ plot_ellipse(x_cent=0, y_cent=0, semimaj=2, semimin=1, phi=np.pi/4, ax=ax)
 plt.show()
 ```
 
+#### Installation
+To install, simply clone this repo to a directory in your PYTHONPATH
