@@ -2,6 +2,7 @@
 ### An easy-to-use function for plotting 2D ellipses in Python 2.7 with matplotlib.
 For example:
 ```python
+#!/usr/bin/env python
 from plot_ellipse import plot_ellipse
 import matplotlib.pyplot as plt
 import numpy as np
@@ -13,3 +14,10 @@ plt.show()
 
 #### Installation
 To install, simply clone this repo to a directory in your PYTHONPATH
+```bash
+#!/bin/bash 
+cd <working_directory>
+git clone https://github.com/nkern/plot_ellipse
+PYTHONPATH=<working_directory>:$PYTHONPATH
+export PYTHONPATH
+```
