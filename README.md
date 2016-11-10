@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 fig,ax = plt.subplots()
-plot_ellipse(semimaj=2, semimin=1, phi=np.pi/4, ax=ax)
+plot_ellipse(x_cent=0, y_cent=0, semimaj=2, semimin=1, phi=np.pi/4, ax=ax)
 plt.show()
 ```
 
