@@ -13,8 +13,8 @@ plt.show()
 ```
 
 #### Features
-It can interface with plt.fill()
-It can directly take a 2x2 covariance matrix (numpy ndarray) and will plot probability contours
+- It can interface with plt.fill()
+- It can directly take a 2x2 covariance matrix (numpy ndarray) and will plot probability contours
 
 #### Installation
 To install, simply clone this repo to a directory in your PYTHONPATH
