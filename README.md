@@ -1,5 +1,5 @@
 ## plot_ellipse.py
-### An easy-to-use function for plotting ellipses in Python 2.7 with matplotlib.
+### An easy-to-use function for plotting 2D ellipses in Python 2.7 with matplotlib.
 For example:
 ```python
 from plot_ellipse import plot_ellipse
