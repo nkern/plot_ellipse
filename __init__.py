@@ -52,7 +52,7 @@ def plot_ellipse(semimaj=1,semimin=1,phi=0,x_cent=0,y_cent=0,theta_num=1e3,ax=No
 		cov : ndarray of shape (2,2)
 			A 2x2 covariance matrix, if given this will overwrite semimaj, semimin and phi
 
-		mass_level : int
+		mass_level : float
 			if supplied cov, mass_level is the contour defining fractional probability mass enclosed
 			for example: mass_level = 0.68 is the standard 68% mass
 
