@@ -65,7 +65,7 @@ def plot_ellipse(semimaj=1,semimin=1,phi=0,x_cent=0,y_cent=0,theta_num=1e3,ax=No
 			eig_vec[0] *= -1
 		semimaj = np.sqrt(eig_val[0])
 		semimin = np.sqrt(eig_val[1])
-		if mass_level is not None:
+		if mass_level is None:
 			multiplier = np.sqrt(2.279)
 		else:
 			distances = np.linspace(0,20,20001)
