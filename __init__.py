@@ -9,7 +9,7 @@ from scipy.stats import chi2
 #import matplotlib.pyplot as plt
 
 def plot_ellipse(semimaj=1,semimin=1,phi=0,x_cent=0,y_cent=0,theta_num=1e3,ax=None,plot_kwargs=None,\
-					fill=False,fill_kwargs=None,data_out=False,cov=None,mass_level=None):
+					fill=False,fill_kwargs=None,data_out=False,cov=None,mass_level=0.68):
 	'''
 		An easy to use function for plotting ellipses in Python 2.7!
 
@@ -60,6 +60,9 @@ def plot_ellipse(semimaj=1,semimin=1,phi=0,x_cent=0,y_cent=0,theta_num=1e3,ax=No
 	# Get Ellipse Properties from cov matrix
 	if cov is not None:
 		eig_vec,eig_val,u = np.linalg.svd(cov)
+		# Make sure 0th eigenvector has positive x-coordinate
+		if eig_vec[0][0] < 0:
+			eig_vec[0] *= -1
 		semimaj = np.sqrt(eig_val[0])
 		semimin = np.sqrt(eig_val[1])
 		if mass_level is not None:
@@ -67,13 +70,12 @@ def plot_ellipse(semimaj=1,semimin=1,phi=0,x_cent=0,y_cent=0,theta_num=1e3,ax=No
 		else:
 			distances = np.linspace(0,20,20001)
 			chi2_cdf = chi2.cdf(distances,df=2)
-			multiplier = np.sqrt(distances[np.where(np.abs(chi2_cdf-cov_levels[i])==np.abs(chi2_cdf-cov_levels[i]).min())[0][0]])
+			multiplier = np.sqrt(distances[np.where(np.abs(chi2_cdf-mass_level)==np.abs(chi2_cdf-mass_level).min())[0][0]])
 		semimaj *= multiplier
 		semimin *= multiplier
 		phi = np.arccos(np.dot(eig_vec[0],np.array([1,0])))
-		if phi > np.pi/2. or phi < -np.pi/2.:
-			eig_vec *= -1
-			phi = np.arccos(np.dot(eig_vec[0],np.array([1,0])))
+		if eig_vec[0][1] < 0 and phi > 0:
+			phi *= -1
 
 	# Generate data for ellipse structure
 	theta = np.linspace(0,2*np.pi,theta_num)
