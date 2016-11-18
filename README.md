@@ -1,4 +1,5 @@
 ## plot_ellipse.py
+<img src="https://travis-ci.org/nkern/plot_ellipse.svg?branch=master" data-pin-nopin="true">
 ### An easy-to-use function for plotting 2D ellipses in Python 2.7 with matplotlib.
 #### For example:
 ```python
