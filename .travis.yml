@@ -4,3 +4,5 @@ matrix:
     - python: "2.7"
 script:
   - "./.travis/run.sh"
+notifications:
+  email: false
