@@ -1,3 +1,2 @@
 #!/bin/bash
-hello=1
-
+python setup.py test
