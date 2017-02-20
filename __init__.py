@@ -9,7 +9,7 @@ from scipy.stats import chi2
 #import matplotlib.pyplot as plt
 
 def plot_ellipse(semimaj=1,semimin=1,phi=0,x_cent=0,y_cent=0,theta_num=1e3,ax=None,plot_kwargs=None,\
-					fill=False,fill_kwargs=None,data_out=False,cov=None,mass_level=0.68):
+					fill=False,fill_kwargs=None,data_out=False,cov=None,mass_level=0.68,return_artist=False):
 	'''
 		An easy to use function for plotting ellipses in Python 2.7!
 
@@ -101,9 +101,9 @@ def plot_ellipse(semimaj=1,semimin=1,phi=0,x_cent=0,y_cent=0,theta_num=1e3,ax=No
 		fig,ax = plt.subplots()
 
 	if plot_kwargs is None:
-		ax.plot(data[0],data[1],color='b',linestyle='-')	
+		p, = ax.plot(data[0],data[1],color='b',linestyle='-')	
 	else:
-		ax.plot(data[0],data[1],**plot_kwargs)
+		p, = ax.plot(data[0],data[1],**plot_kwargs)
 
 	if fill == True:
 		ax.fill(data[0],data[1],**fill_kwargs)
@@ -111,3 +111,5 @@ def plot_ellipse(semimaj=1,semimin=1,phi=0,x_cent=0,y_cent=0,theta_num=1e3,ax=No
 	if return_fig == True:
 		return fig
 
+    if return_artist == True:
+        return p
