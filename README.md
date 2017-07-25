@@ -14,6 +14,25 @@ fig,ax = plt.subplots()
 plot_ellipse(x_cent=0, y_cent=0, semimaj=2, semimin=1, phi=np.pi/4, ax=ax)
 plt.show()
 ```
+<img src="data/fig1.png" width=100px />
+
+or
+
+```python
+#!/usr/bin/env python
+from plot_ellipse import plot_ellipse
+import matplotlib.pyplot as plt
+import numpy as np
+
+C = np.array([[2, 1],[1, 4]])
+
+fig,ax = plt.subplots()
+ax.grid(True)
+plot_ellipse(x_cent=0, y_cent=0, cov=C, mass_level=0.68, fill=True, ax=ax, fill_kwargs={'alpha':0.2})
+plt.show()
+```
+<img src="data/fig2.png" width=100px />
+
 
 #### Features
 - It can interface with plt.fill()
