@@ -57,7 +57,7 @@ def plot_ellipse(semimaj=1,semimin=1,phi=0,x_cent=0,y_cent=0,theta_num=1e3,ax=No
 			for example: mass_level = 0.68 is the standard 68% mass
 
 	'''
-	# Get Ellipse Properties from cov matrix
+        # Get Ellipse Properties from cov matrix
 	if cov is not None:
 		eig_vec,eig_val,u = np.linalg.svd(cov)
 		# Make sure 0th eigenvector has positive x-coordinate
@@ -108,8 +108,8 @@ def plot_ellipse(semimaj=1,semimin=1,phi=0,x_cent=0,y_cent=0,theta_num=1e3,ax=No
 	if fill == True:
 		ax.fill(data[0],data[1],**fill_kwargs)
 
-    if return_fig == True:
-        return fig
+        if return_fig == True:
+            return fig
 
-    if return_artist == True:
-        return p
+        if return_artist == True:
+            return p

@@ -12,5 +12,5 @@ setup(
 	version=VERSION,
 	author="Nick Kern",
 	url="http://github.com/nkern/plot_ellipse",
-	packages=['tests']
+	packages=['plot_ellipse']
 )

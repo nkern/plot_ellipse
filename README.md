@@ -20,11 +20,7 @@ plt.show()
 - It can directly take a 2x2 covariance matrix (numpy ndarray) and will plot probability contours
 
 #### Installation
-To install, simply clone this repo to a directory in your PYTHONPATH
+To install, simply clone this repo and run the `setup.py` script
 ```bash
-#!/bin/bash 
-cd <working_directory>
-git clone https://github.com/nkern/plot_ellipse
-PYTHONPATH=<working_directory>:$PYTHONPATH
-export PYTHONPATH
+python setup.py install
 ```
