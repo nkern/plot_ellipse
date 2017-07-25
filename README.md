@@ -27,8 +27,9 @@ import numpy as np
 C = np.array([[2, 1],[1, 4]])
 
 fig,ax = plt.subplots()
-ax.grid(True)
-plot_ellipse(x_cent=0, y_cent=0, cov=C, mass_level=0.68, fill=True, ax=ax, fill_kwargs={'alpha':0.2})
+ax.grid(True, color='k', alpha=0.5)
+plot_ellipse(x_cent=0, y_cent=0, cov=C, mass_level=0.95, fill=True, ax=ax, fill_kwargs={'alpha':0.1,'c':'b'})
+plot_ellipse(x_cent=0, y_cent=0, cov=C, mass_level=0.68, fill=True, ax=ax, fill_kwargs={'alpha':0.3,'c':'b'})
 plt.show()
 ```
 <img src="data/fig2.png" width=300px />
