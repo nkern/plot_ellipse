@@ -2,7 +2,7 @@
 
 ![Run Tests](https://github.com/nkern/plot_ellipse/workflows/Run%20Tests/badge.svg)
 
-### v1.0.0
+### v1.0.1
 
 #### Examples:
 ```python
