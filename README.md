@@ -1,9 +1,10 @@
-## plot_ellipse
+## plot_ellipse | Easily plot 2D ellipses with matplotlib
 
-<img src="https://travis-ci.org/nkern/plot_ellipse.svg?branch=master" data-pin-nopin="true"/>
+![Run Tests](https://github.com/nkern/plot_ellipse/workflows/Run%20Tests/badge.svg)
 
-### An easy-to-use function for plotting 2D ellipses with matplotlib
-#### For example:
+### v1.0.0
+
+#### Examples:
 ```python
 #!/usr/bin/env python
 from plot_ellipse import plot_ellipse
