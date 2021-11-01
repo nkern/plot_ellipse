@@ -11,5 +11,6 @@ setup(
 	version=VERSION,
 	author="Nicholas Kern",
 	url="http://github.com/nkern/plot_ellipse",
-	packages=['plot_ellipse']
+	packages=['plot_ellipse'],
+    python_requires=">=2.7"
 )
