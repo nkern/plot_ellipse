@@ -1,0 +1,13 @@
+name: plot_ellipse
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - pip
+  - "numpy>=1.18"
+  - pytest
+  - "scipy>=1.4.0"
+  - matplotlib
+  - pyyaml
+  - psutil
+  - pytest-cov

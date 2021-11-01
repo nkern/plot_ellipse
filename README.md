@@ -45,3 +45,7 @@ To install, simply clone this repo and run the `setup.py` script
 ```bash
 python setup.py install
 ```
+
+#### Dependencies
+numpy, scipy, and matplotlib
+
