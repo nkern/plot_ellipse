@@ -4,13 +4,12 @@ try:
 except ImportError:
     from distutils.core import setup, Extension, Command
 
-VERSION = "0.0.1"
-
+VERSION = "1.0.0"
 
 setup(
 	name="plot_ellipse",
 	version=VERSION,
-	author="Nick Kern",
+	author="Nicholas Kern",
 	url="http://github.com/nkern/plot_ellipse",
 	packages=['plot_ellipse']
 )
