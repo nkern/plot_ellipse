@@ -12,5 +12,7 @@ setup(
 	author="Nicholas Kern",
 	url="http://github.com/nkern/plot_ellipse",
 	packages=['plot_ellipse'],
-    python_requires=">=2.7"
+    python_requires=">=2.7",
+    description="Easily plot 2D ellipses with matplotlib." \
+    " Accepts 2x2 covariance matrices and plots confidence regions."
 )
